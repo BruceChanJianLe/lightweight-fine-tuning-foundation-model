@@ -29,7 +29,7 @@
             CURR_SHELL=$(basename "$SHELL")
             eval "$(micromamba shell hook --shell $CURR_SHELL)"
 
-            micromamba create -n light_weight_fine_tuning python pytorch torchvision torchaudio "cuda-version>=12.8,<13" datasets transformers peft evaluate accelerate jupyterlab -c pytorch -c conda-forge -c nvidia -y
+            micromamba create -n jupyterlab python pytorch torchvision torchaudio "cuda-version>=12.8,<13" datasets transformers peft evaluate accelerate jupyterlab -c pytorch -c conda-forge -c nvidia -y
 
             echo "Micromamba development environment"
             echo "Micromamba version: $(micromamba --version)"
